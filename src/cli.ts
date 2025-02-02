@@ -53,8 +53,8 @@ class Cli {
                         }
                     ]);
             //assigning variable to retrieve the new name from the function in the departments class        
-            const departmentId = await departments.addDepartment(answers.name);
-            console.log(`Department added successfully! Department ID: ${departmentId}`);
+            await departments.addDepartment(answers.name);
+            console.log(`Department added successfully!`);
         }
         catch (err) {
             console.error("Error adding department:", err);
